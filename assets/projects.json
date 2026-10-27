@@ -1,0 +1,129 @@
+{
+  "version": "2026-10-24",
+  "source": "Informações e fotografias fornecidas pelo cliente; grafia e unidades normalizadas com sua autorização.",
+  "categories": [
+    {
+      "id": "rural",
+      "label": "Rural"
+    },
+    {
+      "id": "residencial",
+      "label": "Residencial"
+    },
+    {
+      "id": "empresarial",
+      "label": "Empresarial"
+    },
+    {
+      "id": "industrial",
+      "label": "Industrial"
+    }
+  ],
+  "projects": [
+    {
+      "id": "canal-do-boi",
+      "name": "Canal do Boi",
+      "category": "rural",
+      "categoryLabel": "Rural",
+      "capacityKWp": 1600,
+      "powerLabel": "1,6 MWp",
+      "sourceFile": "CANAL DO BOI.png",
+      "featured": true,
+      "featuredOrder": 1,
+      "alt": "Vista aérea de uma instalação de painéis solares no solo — Canal do Boi.",
+      "image": "/images/projects/canal-do-boi.png"
+    },
+    {
+      "id": "casa-bruna-aires",
+      "name": "Casa Bruna Aires",
+      "category": "residencial",
+      "categoryLabel": "Residencial",
+      "capacityKWp": 8.68,
+      "powerLabel": "8,68 kWp",
+      "sourceFile": "CASA BRUNA AIRES.png",
+      "featured": true,
+      "featuredOrder": 2,
+      "alt": "Vista aérea dos painéis solares no telhado — Casa Bruna Aires.",
+      "image": "/images/projects/casa-bruna-aires.png"
+    },
+    {
+      "id": "hl-hoteis",
+      "name": "HL Hotéis",
+      "category": "empresarial",
+      "categoryLabel": "Empresarial",
+      "capacityKWp": 859.65,
+      "powerLabel": "859,65 kWp",
+      "sourceFile": "HL HOTEIS.png",
+      "featured": true,
+      "featuredOrder": 3,
+      "alt": "Vista aérea do complexo hoteleiro com painéis solares nos telhados — HL Hotéis.",
+      "image": "/images/projects/hl-hoteis.png"
+    },
+    {
+      "id": "casa-carlos-barbosa",
+      "name": "Casa Carlos Barbosa",
+      "category": "residencial",
+      "categoryLabel": "Residencial",
+      "capacityKWp": 14.32,
+      "powerLabel": "14,32 kWp",
+      "sourceFile": "CASA CARLOS BARBOSA.png",
+      "featured": false,
+      "featuredOrder": null,
+      "alt": "Sistema fotovoltaico residencial — Casa Carlos Barbosa.",
+      "image": "/images/projects/casa-carlos-barbosa.png"
+    },
+    {
+      "id": "casa-fernando-freire",
+      "name": "Casa Fernando Freire",
+      "category": "residencial",
+      "categoryLabel": "Residencial",
+      "capacityKWp": 15.89,
+      "powerLabel": "15,89 kWp",
+      "sourceFile": "CASA FERNANDO FREIRE.png",
+      "featured": false,
+      "featuredOrder": null,
+      "alt": "Sistema fotovoltaico residencial — Casa Fernando Freire.",
+      "image": "/images/projects/casa-fernando-freire.png"
+    },
+    {
+      "id": "dois-lagos",
+      "name": "Dois Lagos",
+      "category": "rural",
+      "categoryLabel": "Rural",
+      "capacityKWp": 358.7,
+      "powerLabel": "358,70 kWp",
+      "sourceFile": "DOIS LAGOS.png",
+      "featured": false,
+      "featuredOrder": null,
+      "alt": "Instalação fotovoltaica em contexto rural — Dois Lagos.",
+      "image": "/images/projects/dois-lagos.png"
+    },
+    {
+      "id": "fazenda-esperanca",
+      "name": "Fazenda Esperança",
+      "category": "rural",
+      "categoryLabel": "Rural",
+      "capacityKWp": 425.85,
+      "powerLabel": "425,85 kWp",
+      "sourceFile": "FAZENDA ESPERANÇA.png",
+      "featured": false,
+      "featuredOrder": null,
+      "alt": "Instalação fotovoltaica rural — Fazenda Esperança.",
+      "image": "/images/projects/fazenda-esperanca.png"
+    },
+    {
+      "id": "frigorifico-tocantins",
+      "name": "Frigorífico Tocantins",
+      "category": "industrial",
+      "categoryLabel": "Industrial",
+      "capacityKWp": 1100,
+      "powerLabel": "1,1 MWp",
+      "sourceFile": "FRIGORIFICO TOCANTINS.png",
+      "featured": true,
+      "featuredOrder": 4,
+      "alt": "Vista aérea de cobertura industrial com painéis solares — Frigorífico Tocantins.",
+      "image": "/images/projects/frigorifico-tocantins.png"
+    }
+  ]
+}
+

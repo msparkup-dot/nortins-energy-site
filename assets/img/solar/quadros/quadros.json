@@ -1,0 +1,154 @@
+{
+  "version": 2,
+  "date": "2026-10-25",
+  "purpose": "Quadros aprovados pelo cliente para integração no projeto correto. A integração ao site ainda não foi executada.",
+  "width": 1536,
+  "height": 1024,
+  "images": [
+    {
+      "file": "01-ongrid-dia.png",
+      "solution": "on-grid",
+      "condition": "day",
+      "label": "On-grid durante o dia",
+      "summary": "Geração solar atende às cargas e o excedente segue à rede.",
+      "status": "Composição aprovada pelo cliente.",
+      "steps": [
+        "Os painéis captam a luz do sol.",
+        "O inversor converte a energia.",
+        "O quadro distribui para a casa.",
+        "O medidor registra entrada e saída.",
+        "O excedente segue para a rede."
+      ],
+      "alt": "On-grid durante o dia. Geração solar atende às cargas e o excedente segue à rede."
+    },
+    {
+      "file": "02-ongrid-noite.png",
+      "solution": "on-grid",
+      "condition": "night",
+      "label": "On-grid à noite",
+      "summary": "Rede alimenta quadro e consumo pelo medidor; painéis e inversor solar inativos.",
+      "steps": [
+        "Os painéis não geram à noite.",
+        "O inversor solar fica inativo.",
+        "O quadro distribui para a casa.",
+        "O medidor registra a entrada.",
+        "A rede fornece energia à casa."
+      ],
+      "alt": "On-grid à noite. Rede alimenta quadro e consumo pelo medidor; painéis e inversor solar inativos."
+    },
+    {
+      "file": "03-ongrid-sem-rede.png",
+      "solution": "on-grid",
+      "condition": "outage",
+      "label": "On-grid sem rede",
+      "summary": "Exemplo diurno, com sol e sem backup; fornecimento e fluxos elétricos interrompidos.",
+      "steps": [
+        "Mesmo com sol, não há backup.",
+        "O inversor interrompe o fornecimento.",
+        "As cargas ficam sem energia.",
+        "Não há troca de energia.",
+        "A rede está indisponível."
+      ],
+      "alt": "On-grid sem rede. Exemplo diurno, com sol e sem backup; fornecimento e fluxos elétricos interrompidos."
+    },
+    {
+      "file": "04-hibrido-dia.png",
+      "solution": "hybrid",
+      "condition": "day",
+      "label": "Híbrido durante o dia",
+      "summary": "Solar atende à casa e carrega a bateria; rede disponível como apoio.",
+      "steps": [
+        "Os painéis geram energia.",
+        "O inversor gerencia a geração.",
+        "A casa utiliza a energia solar.",
+        "A bateria armazena a reserva.",
+        "A rede permanece disponível."
+      ],
+      "alt": "Híbrido durante o dia. Solar atende à casa e carrega a bateria; rede disponível como apoio."
+    },
+    {
+      "file": "05-hibrido-noite.png",
+      "solution": "hybrid",
+      "condition": "night",
+      "label": "Híbrido à noite",
+      "summary": "Reserva alimenta o consumo através do inversor; rede permanece como apoio.",
+      "steps": [
+        "Os painéis não geram à noite.",
+        "O inversor utiliza a reserva.",
+        "O quadro distribui para a casa.",
+        "A bateria fornece energia.",
+        "A rede permanece como apoio."
+      ],
+      "alt": "Híbrido à noite. Reserva alimenta o consumo através do inversor; rede permanece como apoio."
+    },
+    {
+      "file": "06-hibrido-backup.png",
+      "solution": "hybrid",
+      "condition": "outage",
+      "label": "Híbrido em backup",
+      "summary": "Reserva atende circuitos essenciais com rede isolada; apenas uma área interna iluminada.",
+      "steps": [
+        "Os painéis não geram à noite.",
+        "O inversor atende ao backup.",
+        "Somente circuitos essenciais.",
+        "A bateria fornece a reserva.",
+        "A rede fica isolada."
+      ],
+      "alt": "Híbrido em backup. Reserva atende circuitos essenciais com rede isolada; apenas uma área interna iluminada."
+    },
+    {
+      "file": "07-bess-dia.png",
+      "solution": "storage-bess",
+      "condition": "day",
+      "label": "Baterias / BESS durante o dia",
+      "summary": "Ênfase na carga e no armazenamento da energia disponível.",
+      "steps": [
+        "A energia solar alimenta o sistema.",
+        "O controle gerencia a carga.",
+        "A casa utiliza a energia.",
+        "A bateria guarda a reserva.",
+        "A rede permanece conectada."
+      ],
+      "alt": "Baterias / BESS durante o dia. Ênfase na carga e no armazenamento da energia disponível."
+    },
+    {
+      "file": "08-bess-noite.png",
+      "solution": "storage-bess",
+      "condition": "night",
+      "label": "Baterias / BESS à noite",
+      "summary": "Ênfase no uso da reserva por conversão e distribuição; autonomia depende de reserva e consumo.",
+      "steps": [
+        "Não há geração solar à noite.",
+        "O sistema converte a reserva.",
+        "A energia atende ao consumo.",
+        "A bateria libera energia.",
+        "A rede permanece como apoio."
+      ],
+      "alt": "Baterias / BESS à noite. Ênfase no uso da reserva por conversão e distribuição; autonomia depende de reserva e consumo."
+    },
+    {
+      "file": "09-bess-backup.png",
+      "solution": "storage-bess",
+      "condition": "outage",
+      "label": "Baterias / BESS em backup",
+      "summary": "Armazenamento atende cargas essenciais em sistema de backup dimensionado, com rede isolada.",
+      "steps": [
+        "Sem geração solar neste exemplo.",
+        "O sistema opera em backup.",
+        "São atendidas cargas essenciais.",
+        "A reserva da bateria é utilizada.",
+        "A rede permanece isolada."
+      ],
+      "alt": "Baterias / BESS em backup. Armazenamento atende cargas essenciais em sistema de backup dimensionado, com rede isolada."
+    }
+  ],
+  "defaultState": {
+    "solution": "on-grid",
+    "condition": "day"
+  },
+  "ctas": {
+    "on-grid": "Simular meu projeto on-grid",
+    "hybrid": "Planejar meu sistema híbrido",
+    "storage-bess": "Avaliar armazenamento"
+  }
+}

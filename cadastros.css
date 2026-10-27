@@ -1,0 +1,7 @@
+.consent-talentos label{display:flex;align-items:flex-start;gap:12px;font-size:.87rem;line-height:1.5;color:#B9C4D6;}
+.consent-talentos input[type=checkbox]{flex:0 0 18px;width:18px;height:18px;margin:3px 0 0;accent-color:#FFC200;}
+.form-antispam{margin:16px 0;max-width:100%;overflow:auto;}
+.sim-privacy{grid-column:1/-1;color:#B9C4D6;font-size:.78rem;line-height:1.5;}
+.sim-privacy a,.form-aviso a{color:inherit;text-decoration:underline;}
+.form-status:not(:empty){margin:14px 0;color:#F2EDE4;line-height:1.5;}
+button:disabled{cursor:wait;opacity:.65;}

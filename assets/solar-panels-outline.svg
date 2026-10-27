@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="540" viewBox="0 0 1600 540" fill="none">
+  <title>Traços decorativos de painéis solares nas laterais</title>
+  <defs>
+    <g id="panel" stroke-linecap="round" stroke-linejoin="round">
+      <rect width="156" height="216" rx="7"/>
+      <path d="M8 8H148V208H8Z"/>
+      <path d="M54 8V208M104 8V208M8 48H148M8 88H148M8 128H148M8 168H148"/>
+      <path d="M53 216L42 259M105 216L116 259M27 259H131"/>
+    </g>
+  </defs>
+  <g stroke="#0A1E51" stroke-width="1.5" opacity="0.09">
+    <use href="#panel" transform="translate(-45 162) rotate(-17 78 108)"/>
+    <use href="#panel" transform="translate(90 266) rotate(-17 78 108) scale(.65)"/>
+    <use href="#panel" transform="translate(1490 130) rotate(17 78 108)"/>
+    <use href="#panel" transform="translate(1390 282) rotate(17 78 108) scale(.65)"/>
+    <path d="M0 459C92 426 164 438 236 474M1360 478C1436 438 1518 432 1600 458"/>
+  </g>
+  <g stroke="#FFC200" stroke-width="1.5" stroke-linecap="round" opacity="0.25">
+    <circle cx="94" cy="123" r="20"/>
+    <path d="M94 89V81M94 157V165M60 123H52M128 123H136M70 99L64 93M118 147L124 153M70 147L64 153M118 99L124 93"/>
+    <circle cx="1491" cy="92" r="15"/>
+    <path d="M1491 66V60M1491 118V124M1465 92H1459M1517 92H1523M1473 74L1468 69M1509 110L1514 115M1473 110L1468 115M1509 74L1514 69"/>
+  </g>
+</svg>

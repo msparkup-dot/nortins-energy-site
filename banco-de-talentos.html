@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Banco de Talentos · NORTINS ENERGY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body class="pagina-interna">
+<!-- CABEÇALHO -->
+<header class="cabecalho" id="topo">
+<div class="cabecalho-inner">
+<a href="index.html#inicio" class="logo" aria-label="NORTINS ENERGY — Início">
+<img src="assets/logo.png" alt="NORTINS ENERGY" width="160" height="40">
+</a>
+<nav class="nav" aria-label="Principal">
+<ul class="nav-lista" role="list">
+<li><a href="index.html#inicio">Início</a></li>
+<li><a href="index.html#faq">FAQ</a></li>
+<li><a href="index.html#faca-parte">Faça parte</a></li>
+<li><a href="index.html#contato">Contato</a></li>
+</ul>
+</nav>
+<a href="index.html#contato" class="botao cabecalho-cta">Fale conosco</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Abrir menu">
+<span></span><span></span><span></span>
+</button>
+</div>
+<nav class="nav-mobile" id="nav-mobile" aria-label="Mobile" hidden>
+<ul class="nav-mobile-lista" role="list">
+<li><a href="index.html#inicio">Início</a></li>
+<li><a href="index.html#faq">FAQ</a></li>
+<li><a href="index.html#faca-parte">Faça parte</a></li>
+<li><a href="index.html#contato">Contato</a></li>
+</ul>
+</nav>
+</header>
+<main class="pagina-interna__main">
+<div class="pagina-interna__container">
+<a href="index.html#faca-parte" class="pagina-interna__voltar">← Voltar ao site</a>
+<span class="pagina-interna__rotulo">BANCO DE TALENTOS</span>
+<h1 class="pagina-interna__titulo">Seu talento pode fazer parte da NORTINS.</h1>
+<p class="pagina-interna__texto">Conte um pouco sobre você, escolha sua área de interesse e anexe seu currículo. Queremos conhecer profissionais que possam construir os próximos passos da NORTINS ENERGY.</p>
+<p class="pagina-interna__apoio">Seu cadastro ficará disponível para futuras oportunidades. O envio não representa uma vaga aberta ou garantia de contratação.</p>
+<div class="formulario-painel">
+<!-- Indicador de etapas -->
+<div class="form-steps" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3">
+<span class="form-steps__label" id="step-label">Etapa 1 de 3</span>
+<div class="form-steps__bar"><div class="form-steps__fill" style="width:33%"></div></div>
+</div>
+<form id="form-talentos" novalidate>
+<!-- ETAPA 1: Seus dados -->
+<div class="form-step ativo" data-step="1">
+<h2 class="form-step__titulo" tabindex="-1">Seus dados</h2>
+<div class="form-grid">
+<div class="campo campo--full">
+<label for="tal-nome">Nome completo <span>*</span></label>
+<input type="text" id="tal-nome" name="nome" required autocomplete="name">
+<span class="campo-erro" role="alert">Informe seu nome completo.</span>
+</div>
+<div class="campo">
+<label for="tal-whatsapp">WhatsApp com DDD <span>*</span></label>
+<input type="tel" id="tal-whatsapp" name="whatsapp" required placeholder="(63) 99999-9999" autocomplete="tel">
+<span class="campo-erro" role="alert">Informe um WhatsApp válido com DDD.</span>
+</div>
+<div class="campo">
+<label for="tal-email">E-mail <span>*</span></label>
+<input type="email" id="tal-email" name="email" required autocomplete="email">
+<span class="campo-erro" role="alert">Informe um e-mail válido.</span>
+</div>
+<div class="campo">
+<label for="tal-cidade">Cidade <span>*</span></label>
+<input type="text" id="tal-cidade" name="cidade" required autocomplete="address-level2">
+<span class="campo-erro" role="alert">Informe sua cidade.</span>
+</div>
+<div class="campo">
+<label for="tal-uf">UF <span>*</span></label>
+<select id="tal-uf" name="uf" required>
+<option value="TO" selected>TO</option>
+<option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option>
+<option value="AM">AM</option><option value="BA">BA</option><option value="CE">CE</option>
+<option value="DF">DF</option><option value="ES">ES</option><option value="GO">GO</option>
+<option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option>
+<option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option>
+<option value="PR">PR</option><option value="PE">PE</option><option value="PI">PI</option>
+<option value="RJ">RJ</option><option value="RN">RN</option><option value="RS">RS</option>
+<option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option>
+<option value="SP">SP</option><option value="SE">SE</option>
+</select>
+<span class="campo-erro" role="alert">Selecione a UF.</span>
+</div>
+</div>
+<div class="form-acoes">
+<button type="button" class="botao btn-proximo" data-next="2">Continuar</button>
+</div>
+</div>
+<!-- ETAPA 2: Seu perfil profissional -->
+<div class="form-step" data-step="2">
+<h2 class="form-step__titulo" tabindex="-1">Seu perfil profissional</h2>
+<div class="form-grid">
+<div class="campo campo--full">
+<label for="tal-area">Área de interesse <span>*</span></label>
+<select id="tal-area" name="area" required>
+<option value="">Selecione uma área</option>
+<option value="instalacao">Instalação e técnica</option>
+<option value="engenharia">Engenharia e projetos</option>
+<option value="comercial">Comercial e vendas</option>
+<option value="atendimento">Atendimento e pós-venda</option>
+<option value="administrativo">Administrativo e financeiro</option>
+<option value="logistica">Logística e almoxarifado</option>
+<option value="outra">Outra área</option>
+</select>
+<span class="campo-erro" role="alert">Selecione uma área de interesse.</span>
+</div>
+<div class="campo campo--full">
+<label for="tal-experiencia">Conte um pouco sobre sua experiência</label>
+<textarea id="tal-experiencia" name="experiencia" maxlength="2000" rows="4" placeholder="Opcional — cadastros sem experiência também são bem-vindos."></textarea>
+</div>
+<div class="campo campo--full">
+<label for="tal-linkedin">LinkedIn ou portfólio</label>
+<input type="url" id="tal-linkedin" name="linkedin" placeholder="https://linkedin.com/in/...">
+<span class="campo-erro" role="alert">Informe uma URL válida (com https://).</span>
+</div>
+<div class="campo campo--full">
+<label>Anexar currículo</label>
+<div class="upload-area" id="upload-area" role="button" tabindex="0" aria-describedby="upload-desc">
+<div class="upload-area__icon" aria-hidden="true">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+</div>
+<div class="upload-area__titulo">Anexe seu currículo</div>
+<div class="upload-area__desc" id="upload-desc">Selecione um arquivo ou arraste aqui.</div>
+<div class="upload-area__desc">PDF, DOC ou DOCX · até 5 MB · opcional</div>
+<label class="upload-area__btn" for="tal-curriculo">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+Selecionar currículo
+</label>
+<input type="file" id="tal-curriculo" name="curriculo" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+</div>
+<span class="campo-erro" id="upload-erro" role="alert"></span>
+<div class="upload-info" id="upload-info">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--acento);flex-shrink:0"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+<span class="upload-info__nome" id="upload-nome"></span>
+<div class="upload-info__acoes">
+<button type="button" class="upload-info__acao" id="btn-substituir">Substituir</button>
+<button type="button" class="upload-info__acao" id="btn-remover">Remover</button>
+</div>
+</div>
+</div>
+</div>
+<div class="form-acoes">
+<button type="button" class="botao botao--secundario btn-voltar" data-prev="1">Voltar</button>
+<button type="button" class="botao btn-revisar" data-next="3">Revisar cadastro</button>
+</div>
+</div>
+<!-- ETAPA 3: Revisão e envio -->
+<div class="form-step" data-step="3">
+<h2 class="form-step__titulo" tabindex="-1">Revisão e envio</h2>
+<div class="revisao-lista" id="tal-revisao"></div>
+<div class="form-aviso">
+Seus dados serão utilizados exclusivamente para recrutamento e futuras oportunidades na NORTINS ENERGY. Não compartilhamos suas informações com terceiros. Quando disponível, consulte nossa <a href="#">política de privacidade</a>.
+</div>
+<div class="form-acoes">
+<button type="button" class="botao botao--secundario btn-voltar" data-prev="2">Voltar</button>
+<button type="submit" class="botao btn-enviar">Enviar meu cadastro</button>
+</div>
+</div>
+</form>
+<!-- Estado: Enviando -->
+<div class="form-enviando" id="tal-enviando" aria-live="polite">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+Enviando cadastro…
+</div>
+<!-- Estado: Sucesso -->
+<div class="form-sucesso" id="tal-sucesso">
+<h2 class="form-sucesso__titulo">Cadastro recebido!</h2>
+<p class="form-sucesso__texto">Seu perfil foi incluído no banco de talentos da NORTINS ENERGY. Caso surja uma oportunidade compatível, nossa equipe poderá entrar em contato pelos dados informados.</p>
+<a href="index.html#faca-parte" class="botao">Voltar ao site</a>
+</div>
+</div>
+</div>
+</main>
+<!-- RODAPÉ -->
+<footer class="rodape">
+<div class="rodape-inner">
+<p>&copy; 2026 NORTINS ENERGY. Todos os direitos reservados.</p>
+<nav aria-label="Rodapé">
+<a href="index.html#inicio">Início</a>
+<a href="index.html#faq">FAQ</a>
+<a href="index.html#faca-parte">Faça parte</a>
+<a href="index.html#contato">Contato</a>
+</nav>
+</div>
+</footer>
+<script src="app.js" defer></script>
+<script>
+/* Formulário Banco de Talentos — multi-etapas com upload */
+(() => {
+const form = document.getElementById('form-talentos');
+if (!form) return;
+const steps = form.querySelectorAll('.form-step');
+const stepLabel = document.getElementById('step-label');
+const stepFill = document.querySelector('.form-steps__fill');
+const stepsBar = document.querySelector('.form-steps');
+const revisaoEl = document.getElementById('tal-revisao');
+const enviandoEl = document.getElementById('tal-enviando');
+const sucessoEl = document.getElementById('tal-sucesso');
+const fileInput = document.getElementById('tal-curriculo');
+const uploadArea = document.getElementById('upload-area');
+const uploadInfo = document.getElementById('upload-info');
+const uploadNome = document.getElementById('upload-nome');
+const uploadErro = document.getElementById('upload-erro');
+const btnSubstituir = document.getElementById('btn-substituir');
+const btnRemover = document.getElementById('btn-remover');
+let arquivoSelecionado = null;
+const LABELS = {
+nome: 'Nome completo',
+whatsapp: 'WhatsApp',
+email: 'E-mail',
+cidade: 'Cidade',
+uf: 'UF',
+area: 'Área de interesse',
+experiencia: 'Experiência',
+linkedin: 'LinkedIn / Portfólio',
+curriculo: 'Currículo'
+};
+const AREA_LABELS = {
+instalacao: 'Instalação e técnica',
+engenharia: 'Engenharia e projetos',
+comercial: 'Comercial e vendas',
+atendimento: 'Atendimento e pós-venda',
+administrativo: 'Administrativo e financeiro',
+logistica: 'Logística e almoxarifado',
+outra: 'Outra área'
+};
+const EXTENSOES_VALIDAS = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+const TAMANHO_MAXIMO = 5 * 1024 * 1024; // 5 MB
+function goTo(stepNum) {
+steps.forEach(s => s.classList.remove('ativo'));
+const target = form.querySelector(`.form-step[data-step="${stepNum}"]`);
+if (target) {
+target.classList.add('ativo');
+const titulo = target.querySelector('.form-step__titulo');
+if (titulo) { titulo.focus(); }
+stepLabel.textContent = `Etapa ${stepNum} de 3`;
+stepFill.style.width = `${(stepNum / 3) * 100}%`;
+stepsBar.setAttribute('aria-valuenow', stepNum);
+}
+}
+function validateStep(stepNum) {
+const step = form.querySelector(`.form-step[data-step="${stepNum}"]`);
+const fields = step.querySelectorAll('[required]');
+let valid = true;
+let firstError = null;
+fields.forEach(field => {
+const campo = field.closest('.campo');
+let fieldValid = field.value.trim() !== '';
+if (field.type === 'email' && fieldValid) {
+fieldValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim());
+}
+if (!fieldValid) {
+campo.classList.add('invalido');
+if (!firstError) firstError = field;
+valid = false;
+} else {
+campo.classList.remove('invalido');
+}
+});
+// Validação opcional de LinkedIn quando preenchido
+if (stepNum === 2) {
+const linkedinField = form.querySelector('#tal-linkedin');
+const linkedinCampo = linkedinField.closest('.campo');
+if (linkedinField.value.trim() !== '' && !/^https?:\/\/.+/.test(linkedinField.value.trim())) {
+linkedinCampo.classList.add('invalido');
+if (!firstError) firstError = linkedinField;
+valid = false;
+} else {
+linkedinCampo.classList.remove('invalido');
+}
+}
+if (firstError) firstError.focus();
+return valid;
+}
+function validarArquivo(file) {
+if (!EXTENSOES_VALIDAS.includes(file.type)) {
+uploadErro.textContent = 'Formato inválido. Use PDF, DOC ou DOCX.';
+uploadErro.style.display = 'block';
+return false;
+}
+if (file.size > TAMANHO_MAXIMO) {
+uploadErro.textContent = 'Arquivo muito grande. Máximo de 5 MB.';
+uploadErro.style.display = 'block';
+return false;
+}
+uploadErro.textContent = '';
+uploadErro.style.display = 'none';
+return true;
+}
+function mostrarArquivo(file) {
+if (file) {
+const tamanhoMB = (file.size / 1024 / 1024).toFixed(2);
+uploadNome.textContent = `${file.name} (${tamanhoMB} MB)`;
+uploadInfo.classList.add('visivel');
+uploadArea.style.display = 'none';
+} else {
+uploadInfo.classList.remove('visivel');
+uploadArea.style.display = '';
+}
+}
+function limparArquivo() {
+arquivoSelecionado = null;
+fileInput.value = '';
+mostrarArquivo(null);
+}
+// Upload: seleção via input
+fileInput.addEventListener('change', () => {
+const file = fileInput.files[0];
+if (file && validarArquivo(file)) {
+arquivoSelecionado = file;
+mostrarArquivo(file);
+} else if (file) {
+fileInput.value = '';
+if (arquivoSelecionado) {
+mostrarArquivo(arquivoSelecionado);
+}
+}
+});
+// Upload: drag and drop
+uploadArea.addEventListener('dragover', (e) => {
+e.preventDefault();
+uploadArea.classList.add('arrastando');
+});
+uploadArea.addEventListener('dragleave', () => {
+uploadArea.classList.remove('arrastando');
+});
+uploadArea.addEventListener('drop', (e) => {
+e.preventDefault();
+uploadArea.classList.remove('arrastando');
+const file = e.dataTransfer.files[0];
+if (file && validarArquivo(file)) {
+arquivoSelecionado = file;
+// Nota: não é possível definir fileInput.files por script;
+// o arquivo é mantido na variável arquivoSelecionado
+mostrarArquivo(file);
+}
+});
+// Upload: clique e teclado na área
+uploadArea.addEventListener('click', () => fileInput.click());
+uploadArea.addEventListener('keydown', (e) => {
+if (e.key === 'Enter' || e.key === ' ') {
+e.preventDefault();
+fileInput.click();
+}
+});
+// Botões substituir/remover
+btnSubstituir.addEventListener('click', () => fileInput.click());
+btnRemover.addEventListener('click', limparArquivo);
+function montarRevisao() {
+const data = new FormData(form);
+const items = [];
+['nome', 'whatsapp', 'email', 'cidade', 'uf', 'area', 'experiencia', 'linkedin'].forEach(key => {
+const val = data.get(key);
+if (val && val.trim()) {
+let display = val.trim();
+if (key === 'area') display = AREA_LABELS[val] || val;
+items.push(`<div class="revisao-item"><span class="revisao-label">${LABELS[key]}</span><span class="revisao-valor">${display}</span></div>`);
+}
+});
+// Currículo
+const curriculoDisplay = arquivoSelecionado ? arquivoSelecionado.name : 'Currículo não anexado';
+items.push(`<div class="revisao-item"><span class="revisao-label">${LABELS.curriculo}</span><span class="revisao-valor">${curriculoDisplay}</span></div>`);
+revisaoEl.innerHTML = items.join('');
+}
+// Navegação entre etapas
+form.addEventListener('click', (e) => {
+const nextBtn = e.target.closest('.btn-proximo, .btn-revisar');
+const prevBtn = e.target.closest('.btn-voltar');
+if (nextBtn) {
+const currentStep = parseInt(nextBtn.closest('.form-step').dataset.step);
+if (!validateStep(currentStep)) return;
+const nextStep = parseInt(nextBtn.dataset.next);
+if (nextStep === 3) montarRevisao();
+goTo(nextStep);
+}
+if (prevBtn) {
+goTo(parseInt(prevBtn.dataset.prev));
+}
+});
+// Prevenir Enter nas etapas intermediárias
+form.addEventListener('keydown', (e) => {
+if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
+const currentStep = e.target.closest('.form-step');
+if (currentStep && currentStep.dataset.step !== '3') {
+e.preventDefault();
+}
+}
+});
+// Envio
+form.addEventListener('submit', async (e) => {
+e.preventDefault();
+// TODO: Configurar endpoint real para recebimento de currículos via multipart/form-data
+// O formulário está preparado para enviar com FormData incluindo o arquivo
+// Endpoint esperado: POST /api/talentos (multipart/form-data)
+//
+// Exemplo de implementação futura:
+// const formData = new FormData(form);
+// if (arquivoSelecionado) formData.set('curriculo', arquivoSelecionado);
+// try {
+//   enviandoEl.classList.add('visivel');
+//   form.style.display = 'none';
+//   document.querySelector('.form-steps').style.display = 'none';
+//   const resp = await fetch('/api/talentos', { method: 'POST', body: formData });
+//   if (!resp.ok) throw new Error('Falha no envio');
+//   sucessoEl.classList.add('visivel');
+//   limparArquivo();
+//   form.reset();
+// } catch (err) {
+//   alert('Não foi possível enviar seu cadastro. Tente novamente.');
+//   form.style.display = '';
+//   document.querySelector('.form-steps').style.display = '';
+//   enviandoEl.classList.remove('visivel');
+// }
+//
+// AVISO: Sem endpoint configurado, o envio não será realizado.
+alert('⚠️ Envio ainda indisponível.\n\nO formulário está pronto, mas falta configurar o servidor ou serviço de recebimento.\n\nConfigure o endpoint POST /api/talentos para receber cadastros com currículo via multipart/form-data.');
+});
+})();
+</script>
+</body>
+</html>

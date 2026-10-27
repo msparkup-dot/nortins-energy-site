@@ -1,0 +1,690 @@
+<!doctype html>
+<!--
+  NORTINS ENERGY · Site Cinematográfico por Labrego IA (labregoia.com.br)
+  Projeto: LBG-SC-20261024-78260A16D8 · Assinatura LBG-SC-2026-v1
+  © 2026 Labrego IA. Estrutura, código e método licenciados.
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NORTINS ENERGY — Soluções Energéticas</title>
+  <meta name="description" content="Energia solar e armazenamento para sua casa, sua empresa e o agronegócio no Tocantins. Mais de 1.000 projetos entregues com acompanhamento completo.">
+  <meta name="generator" content="Site Cinematográfico · Labrego IA">
+  <meta name="author" content="Labrego IA · labregoia.com.br">
+  <meta property="og:title" content="NORTINS ENERGY — Soluções Energéticas">
+  <meta property="og:description" content="Energia solar e armazenamento para sua casa, sua empresa e o agronegócio no Tocantins. Mais de 1.000 projetos entregues com acompanhamento completo.">
+  <meta property="og:image" content="assets/frames/desktop/f_0001.webp">
+  <meta name="theme-color" content="#0A1E51">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/frames/desktop/f_0001.webp">
+  <link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" href="cookies.css">
+<link rel="stylesheet" href="cadastros.css">
+</head>
+<body>
+
+<header class="topo" data-site-header>
+  <a href="#inicio" class="marca" aria-label="NORTINS ENERGY — Início">
+    <img src="assets/logo-branca.png" alt="NORTINS ENERGY" class="marca-logo" width="2003" height="785">
+  </a>
+  <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu de navegação">
+    <span>Menu</span>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path class="menu-toggle__abrir" d="M4 6h16M4 12h16M4 18h16"/><path class="menu-toggle__fechar" d="m6 6 12 12M6 18 18 6"/></svg>
+  </button>
+  <nav class="menu" id="site-menu" aria-label="Seções do site">
+    <a href="#beneficios">Para você</a>
+    <a href="#projetos-recentes">Projetos</a>
+    <a href="#solucoes">Como funciona</a>
+    <a href="#parceiros">Parceiros</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#faq">Dúvidas</a>
+    <a href="#faca-parte">Faça parte</a>
+    <a href="#contato" class="menu-cta">Simular economia</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ABERTURA: vídeo toca com a rolagem. Calculadora integrada controla transição dia/noite. -->
+  <section id="inicio" class="cine" style="--altura: 300vh">
+    <div class="cine-palco">
+      <canvas class="cine-canvas" aria-hidden="true"></canvas>
+      <div class="cine-vinheta"></div>
+
+      <div class="hero-conteudo">
+        <div class="hero-texto">
+          <span class="hero-sobretitulo">ENERGIA SOLAR • TOCANTINS</span>
+          <h1 class="hero-titulo">O sol do Tocantins. Uma nova energia para a sua vida.</h1>
+          <p class="hero-apoyo">Energia solar e armazenamento para sua casa, sua empresa e o agronegócio. Atendimento em todo o Tocantins.</p>
+          <div class="hero-indicadores">
+            <div class="hero-ind"><strong data-count="2000" data-prefix="+" data-suffix="">+2.000</strong><span>Projetos realizados</span></div>
+            <div class="hero-ind"><strong data-count="5" data-prefix="" data-suffix="">5</strong><span>Anos no Tocantins</span></div>
+            <div class="hero-ind"><strong data-count="22" data-prefix="+" data-suffix="">+22</strong><span>Milhões em vendas</span></div>
+            <div class="hero-ind"><strong data-count="18000" data-prefix="+" data-format="k">+18K</strong><span>Placas instaladas</span></div>
+          </div>
+        </div>
+
+        <div class="hero-calculadora painel painel--vidro">
+          <label class="calc-rotulo" for="calc-slider">Quanto você paga de energia por mês?</label>
+          <div class="calc-controles">
+            <input type="range" id="calc-slider" class="calc-slider" min="200" max="1600" step="100" value="200" aria-describedby="calc-valor-label">
+            <div class="calc-input-grupo">
+              <span class="calc-prefixo">R$</span>
+              <input type="number" id="calc-input" class="calc-input" min="200" max="1600" step="100" value="200" inputmode="numeric" aria-label="Valor da conta de energia">
+            </div>
+          </div>
+          <button type="button" class="botao calc-botao" id="btn-simular">Simular Economia</button>
+          <p class="calc-aviso" id="calc-aviso" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="cine-dica" aria-hidden="true"><span></span>role</div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS COM FLIP 3D -->
+  <section id="beneficios" class="secao secao--beneficios">
+    <div class="secao-grade secao-grade--centro">
+      <h2 class="beneficios-titulo revelar">A NORTINS ENERGY é para você…</h2>
+      <p class="beneficios-subtitulo revelar">Energia para sua realidade. Confiança em cada etapa.</p>
+      <div class="beneficios-grid">
+        <div class="cartao-flip revelar" style="--delay: 0ms" tabindex="0" role="button" aria-label="Casa, empresa ou agro — virar cartão">
+          <div class="cartao-flip-interno">
+            <div class="cartao-frente">
+              <svg class="cartao-icone" viewBox="0 0 48 48" aria-hidden="true"><path fill="currentColor" d="M6 22v18h12V30h12v10h12V22L24 6 6 22Z"/></svg>
+              <h3>Casa, empresa ou agro</h3>
+              <p>Soluções para sua casa, seu negócio e o campo.</p>
+            </div>
+            <div class="cartao-verso" aria-hidden="true">
+              <h3>Para sua realidade</h3>
+              <p>Avaliamos o consumo e o local para orientar uma solução adequada.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cartao-flip revelar" style="--delay: 100ms" tabindex="0" role="button" aria-label="Financiamento facilitado — virar cartão">
+          <div class="cartao-flip-interno">
+            <div class="cartao-frente">
+              <svg class="cartao-icone" viewBox="0 0 48 48" aria-hidden="true"><path fill="currentColor" d="M8 12h32v6H8zm4 10h24v6H12zm4 10h16v6H16z"/></svg>
+              <h3>Financiamento facilitado</h3>
+              <p>Até 120 vezes, sem entrada.</p>
+            </div>
+            <div class="cartao-verso" aria-hidden="true">
+              <h3>Planeje seu projeto</h3>
+              <p>Conheça as opções disponíveis e as condições aplicáveis à proposta.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cartao-flip revelar" style="--delay: 200ms" tabindex="0" role="button" aria-label="Do contrato à entrega — virar cartão">
+          <div class="cartao-flip-interno">
+            <div class="cartao-frente">
+              <svg class="cartao-icone" viewBox="0 0 48 48" aria-hidden="true"><path fill="currentColor" d="M24 4 4 14v4h40v-4L24 4ZM8 22v18h8V22H8Zm12 0v18h8V22h-8Zm12 0v18h8V22h-8Z"/></svg>
+              <h3>Do contrato à entrega</h3>
+              <p>Acompanhamento em cada etapa do projeto.</p>
+            </div>
+            <div class="cartao-verso" aria-hidden="true">
+              <h3>Compromisso com você</h3>
+              <p>Agilidade e acompanhamento, com atenção ao prazo combinado.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cartao-flip revelar" style="--delay: 300ms" tabindex="0" role="button" aria-label="Pós-venda 24h — virar cartão">
+          <div class="cartao-flip-interno">
+            <div class="cartao-frente">
+              <svg class="cartao-icone" viewBox="0 0 48 48" aria-hidden="true"><path fill="currentColor" d="M24 4a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm2 22h-4v-8h4v8Zm0-12h-4V10h4v4Z"/></svg>
+              <h3>Pós-venda 24h</h3>
+              <p>Um canal de atendimento sempre disponível.</p>
+            </div>
+            <div class="cartao-verso" aria-hidden="true">
+              <h3>Depois da instalação</h3>
+              <p>Atendimento de pós-venda disponível 24 horas por dia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS RECENTES -->
+  <section id="projetos-recentes" class="nortins-projects">
+    <div class="nortins-projects__inner">
+      <header class="nortins-projects__header">
+        <img class="nortins-projects__cloud nortins-projects__cloud--left" src="assets/cloud-outline.svg" alt="" aria-hidden="true">
+        <img class="nortins-projects__cloud nortins-projects__cloud--right" src="assets/cloud-outline.svg" alt="" aria-hidden="true">
+        <h2 class="nortins-projects__title">Confira os projetos mais recentes</h2>
+      </header>
+      <div class="nortins-projects__grid">
+        <article class="nortins-project-card">
+          <img class="nortins-project-card__image" src="assets/images/projects/canal-do-boi.png" alt="Vista aérea de uma instalação de painéis solares no solo — Canal do Boi." loading="lazy">
+          <span class="nortins-project-card__category">Rural</span>
+          <div class="nortins-project-card__info">
+            <h3 class="nortins-project-card__name">Canal do Boi</h3>
+            <p class="nortins-project-card__power">Potência instalada: 1,6 MWp</p>
+          </div>
+        </article>
+        <article class="nortins-project-card">
+          <img class="nortins-project-card__image" src="assets/images/projects/casa-bruna-aires.png" alt="Vista aérea dos painéis solares no telhado — Casa Bruna Aires." loading="lazy">
+          <span class="nortins-project-card__category">Residencial</span>
+          <div class="nortins-project-card__info">
+            <h3 class="nortins-project-card__name">Casa Bruna Aires</h3>
+            <p class="nortins-project-card__power">Potência instalada: 8,68 kWp</p>
+          </div>
+        </article>
+        <article class="nortins-project-card">
+          <img class="nortins-project-card__image" src="assets/images/projects/hl-hoteis.png" alt="Vista aérea do complexo hoteleiro com painéis solares nos telhados — HL Hotéis." loading="lazy">
+          <span class="nortins-project-card__category">Empresarial</span>
+          <div class="nortins-project-card__info">
+            <h3 class="nortins-project-card__name">HL Hotéis</h3>
+            <p class="nortins-project-card__power">Potência instalada: 859,65 kWp</p>
+          </div>
+        </article>
+        <article class="nortins-project-card">
+          <img class="nortins-project-card__image" src="assets/images/projects/frigorifico-tocantins.png" alt="Vista aérea de cobertura industrial com painéis solares — Frigorífico Tocantins." loading="lazy">
+          <span class="nortins-project-card__category">Industrial</span>
+          <div class="nortins-project-card__info">
+            <h3 class="nortins-project-card__name">Frigorífico Tocantins</h3>
+            <p class="nortins-project-card__power">Potência instalada: 1,1 MWp</p>
+          </div>
+        </article>
+      </div>
+      <div class="nortins-projects__actions">
+        <a href="projetos.html" class="nortins-projects__more">Ver mais projetos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA A ENERGIA SOLAR -->
+  <section id="solucoes" class="solar-how">
+    <div class="solar-how__inner">
+      <header class="solar-how__header revelar">
+        <span class="solar-how__eyebrow">TECNOLOGIA GOODWE. PROJETO NORTINS.</span>
+        <h2 class="solar-how__title">Como funciona a energia solar?</h2>
+        <p class="solar-how__intro">Veja o caminho da energia e descubra o que muda em cada solução.</p>
+      </header>
+
+      <div class="solar-how__controls revelar">
+        <div class="solar-how__tabs" role="tablist" aria-label="Sistema solar">
+          <button type="button" role="tab" id="tab-ongrid" aria-selected="true" class="solar-how__tab solar-how__tab--active" data-solution="on-grid">On-grid</button>
+          <button type="button" role="tab" id="tab-hibrido" aria-selected="false" class="solar-how__tab" data-solution="hybrid" tabindex="-1">Híbrido</button>
+          <button type="button" role="tab" id="tab-bess" aria-selected="false" class="solar-how__tab" data-solution="storage-bess" tabindex="-1">Baterias / BESS</button>
+        </div>
+        <div class="solar-how__conditions" role="radiogroup" aria-label="Condição da residência">
+          <label class="solar-how__condition solar-how__condition--active">
+            <input type="radio" name="solar-condition" value="day" checked> Durante o dia
+          </label>
+          <label class="solar-how__condition">
+            <input type="radio" name="solar-condition" value="night"> À noite
+          </label>
+          <label class="solar-how__condition">
+            <input type="radio" name="solar-condition" value="outage"> Falta de energia
+          </label>
+        </div>
+      </div>
+
+      <div class="solar-how__viewer revelar">
+        <div class="solar-how__frame">
+          <img class="solar-how__img" src="assets/img/solar/quadros/01-ongrid-dia.webp" alt="On-grid durante o dia. Geração solar atende às cargas e o excedente segue à rede." width="1536" height="1024" loading="lazy">
+        </div>
+        <div class="solar-how__info">
+          <p class="solar-how__caption" aria-live="polite">Geração solar atende às cargas e o excedente segue à rede.</p>
+          <details class="solar-how__steps-expander">
+            <summary>Ler etapas</summary>
+            <ol class="solar-how__steps">
+              <li>Os painéis captam a luz do sol.</li>
+              <li>O inversor converte a energia.</li>
+              <li>O quadro distribui para a casa.</li>
+              <li>O medidor registra entrada e saída.</li>
+              <li>O excedente segue para a rede.</li>
+            </ol>
+          </details>
+          <button type="button" class="botao solar-how__cta" data-sim-solution="on-grid">Simular meu projeto on-grid</button>
+        </div>
+      </div>
+
+      </div>
+  </section>
+
+  <!-- PARCEIROS -->
+  <section id="parceiros" class="nortins-partners" aria-labelledby="partners-title">
+    <svg class="nortins-partners__edge" viewBox="0 0 1440 32" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20C240 32 360 4 600 16S1080 4 1440 20V32H0Z" fill="#fff"/></svg>
+    <h2 id="partners-title" class="nortins-partners__title">Nossos parceiros</h2>
+    <div class="nortins-partners__row nortins-partners__row--financiamento">
+      <h3>Bancos e financiamento</h3>
+      <div class="nortins-partners__viewport">
+        <div class="nortins-partners__track">
+          <ul class="nortins-partners__group" role="list">
+            <li class="nortins-partners__item"><img src="assets/img/partners/santander-azul.svg" alt="Santander" style="--logo-width:190px;--logo-height:48px" width="190" height="48"></li>
+            <li class="nortins-partners__item"><img src="assets/img/partners/sol-agora-azul.svg" alt="Sol Agora" style="--logo-width:180px;--logo-height:48px" width="180" height="48"></li>
+            <li class="nortins-partners__item"><img src="assets/img/partners/solfi-azul.svg" alt="Solfi" style="--logo-width:140px;--logo-height:56px" width="140" height="56"></li>
+            <li class="nortins-partners__item"><img src="assets/img/partners/sicoob-azul.svg" alt="Sicoob" style="--logo-width:180px;--logo-height:48px" width="180" height="48"></li>
+            <li class="nortins-partners__item"><img src="assets/img/partners/sicredi-azul.svg" alt="Sicredi" style="--logo-width:180px;--logo-height:48px" width="180" height="48"></li>
+            <li class="nortins-partners__item"><img src="assets/img/partners/caixa-azul.svg" alt="CAIXA" style="--logo-width:158px;--logo-height:48px" width="158" height="48"></li>
+          </ul>
+          <ul class="nortins-partners__group" aria-hidden="true">
+            <li class="nortins-partners__item"><img src="assets/img/partners/santander-azul.svg" alt="Santander" style="--logo-width:190px;--logo-height:48px" width="190" height="48"></li>
+            <li class="nortins-partners__item"><img src="assets/img/partners/sol-agora-azul.svg" alt="Sol Agora" style="--logo-width:180px;--logo-height:48px" width="180" height="48"></li>
+            <li class="nortins-partners__item"><img src="assets/img/partners/solfi-azul.svg" alt="Solfi" style="--logo-width:140px;--logo-height:56px" width="140" height="56"></li>
+            <li class="nortins-partners__item"><img src="assets/img/partners/sicoob-azul.svg" alt="Sicoob" style="--logo-width:180px;--logo-height:48px" width="180" height="48"></li>
+            <li class="nortins-partners__item"><img src="assets/img/partners/sicredi-azul.svg" alt="Sicredi" style="--logo-width:180px;--logo-height:48px" width="180" height="48"></li>
+            <li class="nortins-partners__item"><img src="assets/img/partners/caixa-azul.svg" alt="CAIXA" style="--logo-width:158px;--logo-height:48px" width="158" height="48"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="nortins-partners__row nortins-partners__row--fornecedor">
+      <h3>Fornecedores</h3>
+      <div class="nortins-partners__viewport">
+        <div class="nortins-partners__track">
+          <ul class="nortins-partners__group" role="list">
+            <li class="nortins-partners__item"><img src="assets/img/partners/rb-solar-azul.svg" alt="RB Solar" style="--logo-width:150px;--logo-height:68px" width="150" height="68"></li>
+            <li class="nortins-partners__item"><img src="assets/img/partners/belenergy-azul.svg" alt="BelEnergy" style="--logo-width:172px;--logo-height:48px" width="172" height="48"></li>
+            <li class="nortins-partners__item"><img src="assets/img/partners/aldo-solar-azul.svg" alt="Aldo Solar" style="--logo-width:180px;--logo-height:48px" width="180" height="48"></li>
+            <li class="nortins-partners__item"><img src="assets/img/partners/fotus-azul.svg" alt="Fotus" style="--logo-width:174px;--logo-height:54px" width="174" height="54"></li>
+          </ul>
+          <ul class="nortins-partners__group" aria-hidden="true">
+            <li class="nortins-partners__item"><img src="assets/img/partners/rb-solar-azul.svg" alt="RB Solar" style="--logo-width:150px;--logo-height:68px" width="150" height="68"></li>
+            <li class="nortins-partners__item"><img src="assets/img/partners/belenergy-azul.svg" alt="BelEnergy" style="--logo-width:172px;--logo-height:48px" width="172" height="48"></li>
+            <li class="nortins-partners__item"><img src="assets/img/partners/aldo-solar-azul.svg" alt="Aldo Solar" style="--logo-width:180px;--logo-height:48px" width="180" height="48"></li>
+            <li class="nortins-partners__item"><img src="assets/img/partners/fotus-azul.svg" alt="Fotus" style="--logo-width:174px;--logo-height:54px" width="174" height="54"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <svg class="nortins-partners__edge nortins-partners__edge--bottom" viewBox="0 0 1440 32" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20C240 32 360 4 600 16S1080 4 1440 20V32H0Z" fill="#fff"/></svg>
+  </section>
+
+  <!-- SOBRE A NORTINS -->
+  <section id="sobre" class="nortins-about revelar">
+    <div class="nortins-about__inner">
+      <span class="nortins-about__eyebrow">POR QUE A NORTINS ENERGY EXISTE</span>
+      <h2 class="nortins-about__title">Tem muita coisa errada no mercado solar. A gente escolheu o lado oposto.</h2>
+      <p class="nortins-about__intro">Quem investe em energia solar precisa saber o que está contratando, como o sistema vai atender ao seu consumo e com quem contar depois. Com raízes no Tocantins, a NORTINS ENERGY une tecnologia e acompanhamento próximo para dar clareza a cada etapa, da proposta à entrega.</p>
+
+      <div class="nortins-about__columns">
+        <article class="nortins-about__col">
+          <h3>Compromisso que vai além do contrato</h3>
+          <p>Da assinatura do contrato à entrega, o cliente precisa de informação, acompanhamento e compromisso com o prazo combinado. É isso que orienta nossa atuação: agilidade para executar e responsabilidade para conduzir cada etapa.</p>
+        </article>
+        <article class="nortins-about__col">
+          <h3>Um projeto que considera sua realidade</h3>
+          <p>Uma casa, uma empresa e uma propriedade rural têm necessidades diferentes. Consumo, condições de instalação e objetivos do cliente orientam a solução, seja on-grid, híbrida ou com armazenamento. A tecnologia precisa fazer sentido para quem vai usar.</p>
+        </article>
+        <article class="nortins-about__col">
+          <h3>Economia explicada com clareza</h3>
+          <p>A economia depende do consumo, da tarifa e do dimensionamento do sistema. Estimativas e condições comerciais precisam ser claras. O cliente deve entender a proposta antes de decidir, sem confundir uma simulação com um resultado garantido.</p>
+        </article>
+      </div>
+
+      <p class="nortins-about__closing">A relação com o cliente continua depois da instalação. Nosso pós-venda está disponível 24 horas por dia para receber suas demandas. A confiança que buscamos construir no Tocantins vem desse compromisso: estar presente antes, durante e depois da entrega.</p>
+    </div>
+  </section>
+
+  <!-- PERGUNTAS FREQUENTES -->
+  <section id="faq" class="nortins-faq revelar">
+    <div class="nortins-faq__inner">
+      <header class="nortins-faq__header">
+        <h2 class="nortins-faq__title">Dúvidas frequentes</h2>
+        <p class="nortins-faq__intro">Respostas claras sobre energia solar, investimento e atendimento.</p>
+      </header>
+
+      <div class="nortins-faq__list">
+        <details class="nortins-faq__item">
+          <summary class="nortins-faq__question">
+            <span>Quanto posso economizar com energia solar?</span>
+            <span class="nortins-faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="nortins-faq__answer">
+            <p>A economia depende do seu consumo, da tarifa de energia, das condições do imóvel e do dimensionamento do sistema. A análise da sua conta ajuda a estimar o potencial de economia e orientar uma solução adequada à sua realidade.</p>
+          </div>
+        </details>
+
+        <details class="nortins-faq__item">
+          <summary class="nortins-faq__question">
+            <span>Como o sistema funciona em dias nublados e à noite?</span>
+            <span class="nortins-faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="nortins-faq__answer">
+            <p>Os painéis podem gerar energia em dias nublados, geralmente em menor quantidade. À noite, não há geração solar: o fornecimento vem da rede elétrica ou da energia armazenada em baterias, quando esse recurso faz parte do projeto.</p>
+          </div>
+        </details>
+
+        <details class="nortins-faq__item">
+          <summary class="nortins-faq__question">
+            <span>Vou ter energia quando faltar luz?</span>
+            <span class="nortins-faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="nortins-faq__answer">
+            <p>O sistema on-grid convencional não fornece backup durante uma queda da rede. Sistemas híbridos com baterias e configuração adequada podem atender aos circuitos previstos no projeto, conforme a reserva disponível e os limites dos equipamentos.</p>
+          </div>
+        </details>
+
+        <details class="nortins-faq__item">
+          <summary class="nortins-faq__question">
+            <span>É possível financiar meu projeto?</span>
+            <span class="nortins-faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="nortins-faq__answer">
+            <p>Sim. A NORTINS ENERGY oferece opções de financiamento em até 120 vezes, sem entrada, conforme as condições disponíveis e a aprovação de crédito da instituição financeira. Nossa equipe apresenta as alternativas aplicáveis à sua proposta.</p>
+          </div>
+        </details>
+
+        <details class="nortins-faq__item">
+          <summary class="nortins-faq__question">
+            <span>Qual é o prazo para instalar o sistema?</span>
+            <span class="nortins-faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="nortins-faq__answer">
+            <p>O prazo varia conforme o tamanho do projeto, as condições de instalação e as etapas necessárias para sua execução. O cronograma é alinhado na contratação, com acompanhamento da NORTINS da assinatura do contrato à entrega do sistema.</p>
+          </div>
+        </details>
+
+        <details class="nortins-faq__item">
+          <summary class="nortins-faq__question">
+            <span>A NORTINS atende minha cidade?</span>
+            <span class="nortins-faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="nortins-faq__answer">
+            <p>Atendemos todo o Tocantins, com foco em Palmas e região e Araguaína e região. Desenvolvemos soluções para residências, empresas e propriedades rurais.</p>
+          </div>
+        </details>
+
+        <details class="nortins-faq__item">
+          <summary class="nortins-faq__question">
+            <span>Como funciona o atendimento depois da instalação?</span>
+            <span class="nortins-faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="nortins-faq__answer">
+            <p>Nosso pós-venda está disponível 24 horas por dia para receber dúvidas e solicitações. A relação com o cliente continua após a entrega, com orientação e acompanhamento das demandas apresentadas.</p>
+          </div>
+        </details>
+      </div>
+
+      <p class="nortins-faq__footer">Ainda tem dúvidas? <a href="#contato" class="nortins-faq__link">Fale com a NORTINS.</a></p>
+    </div>
+  </section>
+
+  <!-- FAÇA PARTE -->
+  <section id="faca-parte" class="faca-parte revelar">
+    <div class="faca-parte__inner">
+      <header class="faca-parte__header">
+        <span class="faca-parte__rotulo">FAÇA PARTE DA NORTINS</span>
+        <h2 class="faca-parte__titulo">Faça parte da energia que transforma o Tocantins.</h2>
+        <p class="faca-parte__intro">Conecte oportunidades à energia solar ou cadastre seu talento para construir o futuro com a gente.</p>
+      </header>
+      <div class="faca-parte__cards">
+        <article class="faca-parte__card">
+          <div class="faca-parte__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 21v-1a6 6 0 0 1 6-6h0"/><path d="M17 13a4 4 0 0 1 4 4v1"/></svg>
+          </div>
+          <h3 class="faca-parte__card-titulo">Seja parceiro comercial</h3>
+          <p class="faca-parte__card-texto">Conecte oportunidades à energia solar. Apresente seu perfil e sua região de atuação para conhecer as possibilidades de parceria.</p>
+          <button type="button" class="botao faca-parte__btn" data-open-modal="modal-parceria">Quero ser parceiro</button>
+        </article>
+        <article class="faca-parte__card">
+          <div class="faca-parte__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M2 10h20"/><path d="M10 14h4"/></svg>
+          </div>
+          <h3 class="faca-parte__card-titulo">Trabalhe conosco</h3>
+          <p class="faca-parte__card-texto">Seu talento pode fazer parte da NORTINS. Cadastre seu perfil e envie seu currículo para futuras oportunidades.</p>
+          <button type="button" class="botao faca-parte__btn" data-open-modal="modal-talentos">Cadastrar meu currículo</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FECHAMENTO / CALCULADORA -->
+  <section id="contato" class="fechamento revelar">
+    <div class="fechamento__sol" aria-hidden="true"></div>
+    <div class="fechamento__inner">
+      <span class="fechamento__rotulo">O PRÓXIMO PASSO COMEÇA AQUI</span>
+      <h2 class="fechamento__titulo">Reduza sua conta de luz com energia solar.</h2>
+      <p class="fechamento__desc">Simule seu projeto e receba um orçamento personalizado da NORTINS ENERGY.</p>
+
+      <div class="fechamento__calc">
+        <label class="fechamento__calc-label" for="calc-footer-valor">Quanto você paga de energia por mês?</label>
+        <div class="fechamento__calc-row">
+          <span class="fechamento__calc-prefix">R$</span>
+          <input type="number" id="calc-footer-valor" class="fechamento__calc-input" min="200" max="1600" step="100" value="200" inputmode="numeric">
+        </div>
+        <input aria-label="Gasto mensal de energia" type="range" id="calc-footer-range" class="fechamento__calc-range" min="200" max="1600" step="100" value="200">
+        <button type="button" class="botao fechamento__calc-btn" id="btn-simular-footer">Simular Economia</button>
+      </div>
+
+      <p class="fechamento__atendimento">Atendimento em todo o Tocantins.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookie-banner" hidden role="dialog" aria-label="Preferências de cookies">
+  <div class="cookie-banner__inner">
+    <h3 class="cookie-banner__titulo">Sua privacidade importa.</h3>
+    <p class="cookie-banner__texto">Você pode aceitar ou recusar cookies opcionais de medição e publicidade. Os recursos essenciais do site continuam funcionando em qualquer opção. Saiba mais na <a href="privacidade.html">Política de Privacidade</a>.</p>
+    <div class="cookie-banner__acoes">
+      <button type="button" class="botao cookie-banner__btn" id="cookie-aceitar">Aceitar opcionais</button>
+      <button type="button" class="botao botao--secundario cookie-banner__btn" id="cookie-recusar">Recusar opcionais</button>
+      <button type="button" class="cookie-banner__personalizar" id="cookie-personalizar">Personalizar</button>
+    </div>
+  </div>
+</div>
+
+<footer class="rodape">
+  <div class="rodape__inner">
+    <div class="rodape__col rodape__col--nav">
+      <h4 class="rodape__col-titulo">NAVEGAÇÃO</h4>
+      <nav aria-label="Rodapé">
+        <a href="#inicio">Início</a>
+        <a href="#solucoes">Como funciona</a>
+        <a href="#projetos-recentes">Projetos</a>
+        <a href="#sobre">Sobre a NORTINS</a>
+        <a href="#faq">Dúvidas frequentes</a>
+        <a href="#faca-parte">Faça parte</a>
+        <a href="#contato">Simular economia</a>
+      </nav>
+    </div>
+    <div class="rodape__col rodape__col--contato">
+      <h4 class="rodape__col-titulo">CONTATO</h4>
+      <p>Av. Anhanguera, 234 - St. Caraja,<br>Araguaína - TO, 77809-200</p>
+      <p><a href="mailto:contato@nortinsenergy.com.br">contato@nortinsenergy.com.br</a></p>
+      <p><a href="tel:+5563984265244">(63) 98426-5244</a></p>
+      <p class="rodape__whats"><a href="https://wa.me/5563984265244" target="_blank" rel="noopener">Conversar no WhatsApp</a></p>
+    </div>
+    <div class="rodape__col rodape__col--marca">
+      <img src="assets/logo-branca.png" alt="NORTINS ENERGY" class="rodape__logo">
+      <p class="rodape__tagline">Energia solar feita do jeito certo. Desde 2020, no Tocantins.</p>
+      <p class="rodape__slogan"><em>Energia que compensa de verdade.</em></p>
+      <div class="rodape__social">
+        <a href="https://www.instagram.com/nortinsenergy/" target="_blank" rel="noopener" aria-label="Instagram da NORTINS ENERGY"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://share.google/aiGKbXrclu3SgtO0j" target="_blank" rel="noopener" aria-label="Perfil da NORTINS ENERGY no Google"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09Z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.87 0-5.31-1.94-6.18-4.55H2.16v2.84C3.97 20.53 7.69 23 12 23Z"/><path d="M5.82 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.16C1.42 8.55 1 10.22 1 12s.42 3.45 1.16 4.93l3.66-2.84Z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.69 1 3.97 3.47 2.16 7.07l3.66 2.84c.87-2.61 3.31-4.53 6.18-4.53Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="rodape__bottom">
+    <span><span data-ano>2026</span> © Nortins Energy Solucoes Renovaveis LTDA · CNPJ 57.362.335/0001-77 · Tocantins</span>
+    <a href="privacidade.html">Política de Privacidade</a>
+    <button type="button" class="rodape__cookies-btn" id="btn-preferencias-cookies">Preferências de cookies</button>
+    <span class="rodape__credito">Site criado por SparkUp Marketing.</span>
+  </div>
+</footer>
+
+<a class="whats" href="https://wa.me/5563984265244?text=Ol%C3%A1!%20Conheci%20a%20NORTINS%20ENERGY%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto%20de%20energia%20solar." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.1c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.6S23 3 16 3Zm0 23.1c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.2 1.3-4-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.5 9.8 10.2 5.2 16 5.2s10.5 4.6 10.5 10.4S21.8 26.1 16 26.1Zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.6-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.7 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4Z"/></svg>
+</a>
+
+<!-- MODAL SIMULADOR -->
+<div class="modal-overlay" id="modal-simulador" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" hidden>
+  <div class="modal-container">
+    <button type="button" class="modal-fechar" id="modal-fechar" aria-label="Fechar simulador">&times;</button>
+
+    <!-- TELA 1: FORMULÁRIO -->
+    <div class="modal-tela modal-tela--ativa" id="tela-form">
+      <h2 id="modal-titulo" class="modal-titulo">Simulador de Energia Solar</h2>
+      <p class="modal-desc">Informe os dados do seu projeto para consultar uma opção com a NORTINS ENERGY.</p>
+      <form class="form form--modal" id="form-simulador" novalidate>
+        <div class="campo">
+          <label for="sim-gasto">Gasto mensal (R$)</label>
+          <input id="sim-gasto" name="gasto" type="number" min="200" step="100" inputmode="numeric" required>
+        </div>
+        <div class="campo">
+          <label for="sim-tipo">Tipo de projeto</label>
+          <select id="sim-tipo" name="tipo" required>
+            <option value="">Selecione</option>
+            <option value="residencial">Residencial</option>
+            <option value="empresarial">Empresarial</option>
+            <option value="agronegocio">Agronegócio</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="sim-cidade">Cidade / UF</label>
+          <input id="sim-cidade" name="cidade" placeholder="Ex: Palmas - TO" required>
+        </div>
+        <div class="campo">
+          <label for="sim-nome">Nome</label>
+          <input id="sim-nome" name="nome" autocomplete="name" required>
+        </div>
+        <div class="campo">
+          <label for="sim-whats">WhatsApp</label>
+          <input id="sim-whats" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" required>
+        </div>
+        <div class="campo">
+          <label for="sim-email">E-mail (opcional)</label>
+          <input id="sim-email" name="email" type="email" autocomplete="email">
+        </div>
+        <div class="campo campo--inteiro">
+          <label for="sim-kwh">Consumo em kWh/mês (opcional)</label>
+          <input id="sim-kwh" name="kwh" type="number" min="0.01" step="0.01" inputmode="numeric" placeholder="Melhora a precisão da simulação">
+        </div>
+        <div class="campo campo--inteiro">
+          <label class="checkbox-label">
+            <input type="checkbox" id="sim-armazenamento" name="armazenamento">
+            Tenho interesse em híbrido ou armazenamento (bateria)
+          </label>
+        </div>
+        <button type="submit" class="botao campo--inteiro" id="btn-ver-projeto">Ver meu projeto solar</button>
+        <p class="sim-privacy">Usaremos os dados para analisar sua solicitação. <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</p><p class="form-status campo--inteiro" id="sim-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <!-- TELA 2: RESULTADO -->
+    <div class="modal-tela" id="tela-resultado" hidden>
+      <h2 class="modal-titulo">Seu Projeto Solar</h2>
+      <div class="resultado-grid" id="resultado-conteudo">
+        <!-- Preenchido via JS -->
+      </div>
+      <div class="resultado-acoes">
+        <button type="button" class="botao botao--secundario" id="btn-editar">Editar informações</button>
+        <a href="#" class="botao" id="btn-whats-resultado" target="_blank" rel="noopener">Falar com um consultor no WhatsApp</a>
+      </div>
+      <p class="resultado-modo" id="resultado-modo"></p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL PARCERIA COMERCIAL -->
+<div class="modal-overlay" id="modal-parceria" role="dialog" aria-modal="true" aria-labelledby="par-modal-titulo" hidden>
+  <div class="modal-container">
+    <button type="button" class="modal-fechar" data-close-modal="modal-parceria" aria-label="Fechar">&times;</button>
+    <h2 id="par-modal-titulo" class="modal-titulo">Conecte oportunidades à energia solar.</h2>
+    <p class="modal-desc">Apresente seu perfil e sua região de atuação para conhecer as possibilidades de parceria.</p>
+    <div class="form-steps" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3">
+      <span class="form-steps__label" id="par-step-label">Etapa 1 de 3</span>
+      <div class="form-steps__bar"><div class="form-steps__fill" id="par-step-fill" style="width:33%"></div></div>
+    </div>
+    <form id="form-parceria" novalidate>
+      <div class="form-step ativo" data-step="1">
+        <h3 class="form-step__titulo" tabindex="-1">Seus dados</h3>
+        <div class="form-grid">
+          <div class="campo campo--full"><label for="par-nome">Nome completo <span>*</span></label><input type="text" id="par-nome" name="nome" required autocomplete="name"><span class="campo-erro">Informe seu nome completo.</span></div>
+          <div class="campo"><label for="par-whatsapp">WhatsApp <span>*</span></label><input type="tel" id="par-whatsapp" name="whatsapp" required placeholder="(63) 99999-9999" autocomplete="tel"><span class="campo-erro">Informe um WhatsApp válido.</span></div>
+          <div class="campo"><label for="par-email">E-mail</label><input type="email" id="par-email" name="email" autocomplete="email"><span class="campo-erro">E-mail inválido.</span></div>
+          <div class="campo"><label for="par-cidade">Cidade <span>*</span></label><input type="text" id="par-cidade" name="cidade" required autocomplete="address-level2"><span class="campo-erro">Informe a cidade.</span></div>
+          <div class="campo"><label for="par-uf">UF <span>*</span></label><select id="par-uf" name="uf" required><option value="TO" selected>TO</option><option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option><option value="AM">AM</option><option value="BA">BA</option><option value="CE">CE</option><option value="DF">DF</option><option value="ES">ES</option><option value="GO">GO</option><option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option><option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option><option value="PR">PR</option><option value="PE">PE</option><option value="PI">PI</option><option value="RJ">RJ</option><option value="RN">RN</option><option value="RS">RS</option><option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option><option value="SP">SP</option><option value="SE">SE</option></select><span class="campo-erro">Selecione a UF.</span></div>
+        </div>
+        <div class="form-acoes"><button type="button" class="botao btn-proximo" data-next="2">Continuar</button></div>
+      </div>
+      <div class="form-step" data-step="2">
+        <h3 class="form-step__titulo" tabindex="-1">Seu interesse</h3>
+        <div class="form-grid">
+          <div class="campo campo--full"><label for="par-atuacao">Como deseja atuar? <span>*</span></label><select id="par-atuacao" name="atuacao" required><option value="">Selecione</option><option value="indicacao">Indicação de clientes</option><option value="prospeccao">Prospecção de clientes</option><option value="representacao">Representação comercial</option><option value="entender">Quero entender as possibilidades</option></select><span class="campo-erro">Selecione uma opção.</span></div>
+          <div class="campo campo--full"><label for="par-regiao">Região pretendida <span>*</span></label><input type="text" id="par-regiao" name="regiao" required placeholder="Ex.: Palmas e região"><span class="campo-erro">Informe a região.</span></div>
+          <div class="campo campo--full"><label for="par-experiencia">Experiência resumida</label><textarea id="par-experiencia" name="experiencia" rows="3" maxlength="2000"></textarea></div>
+        </div>
+        <div class="form-acoes"><button type="button" class="botao botao--secundario btn-voltar" data-prev="1">Voltar</button><button type="button" class="botao btn-revisar" data-next="3">Revisar cadastro</button></div>
+      </div>
+      <div class="form-step" data-step="3">
+        <h3 class="form-step__titulo" tabindex="-1">Revisão e envio</h3>
+        <div class="revisao-lista" id="par-revisao"></div>
+        <p class="form-aviso">Usaremos estes dados para avaliar seu interesse e entrar em contato. Consulte a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</p>
+        <p class="form-status" data-form-status role="status" aria-live="polite"></p><div class="form-acoes"><button type="button" class="botao botao--secundario btn-voltar" data-prev="2">Voltar</button><button type="submit" class="botao btn-enviar">Enviar interesse em parceria</button></div>
+      </div>
+    </form>
+    <div class="form-enviando" id="par-enviando" aria-live="polite"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Enviando…</div>
+    <div class="form-sucesso" id="par-sucesso"><h3 class="form-sucesso__titulo">Recebemos seu interesse!</h3><p class="form-sucesso__texto">A equipe NORTINS poderá entrar em contato pelos dados informados.</p><button type="button" class="botao" data-close-modal="modal-parceria">Fechar</button></div>
+  </div>
+</div>
+
+<!-- MODAL BANCO DE TALENTOS -->
+<div class="modal-overlay" id="modal-talentos" role="dialog" aria-modal="true" aria-labelledby="tal-modal-titulo" hidden>
+  <div class="modal-container">
+    <button type="button" class="modal-fechar" data-close-modal="modal-talentos" aria-label="Fechar">&times;</button>
+    <h2 id="tal-modal-titulo" class="modal-titulo">Seu talento pode fazer parte da NORTINS.</h2>
+    <p class="modal-desc">Cadastre seu perfil e envie seu currículo para futuras oportunidades.</p>
+    <div class="form-steps" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3">
+      <span class="form-steps__label" id="tal-step-label">Etapa 1 de 3</span>
+      <div class="form-steps__bar"><div class="form-steps__fill" id="tal-step-fill" style="width:33%"></div></div>
+    </div>
+    <form id="form-talentos" novalidate>
+      <div class="form-step ativo" data-step="1">
+        <h3 class="form-step__titulo" tabindex="-1">Seus dados</h3>
+        <div class="form-grid">
+          <div class="campo campo--full"><label for="tal-nome">Nome completo <span>*</span></label><input type="text" id="tal-nome" name="nome" required autocomplete="name"><span class="campo-erro">Informe seu nome.</span></div>
+          <div class="campo"><label for="tal-whatsapp">WhatsApp <span>*</span></label><input type="tel" id="tal-whatsapp" name="whatsapp" required placeholder="(63) 99999-9999" autocomplete="tel"><span class="campo-erro">WhatsApp inválido.</span></div>
+          <div class="campo"><label for="tal-email">E-mail <span>*</span></label><input type="email" id="tal-email" name="email" required autocomplete="email"><span class="campo-erro">E-mail inválido.</span></div>
+          <div class="campo"><label for="tal-cidade">Cidade <span>*</span></label><input type="text" id="tal-cidade" name="cidade" required autocomplete="address-level2"><span class="campo-erro">Informe a cidade.</span></div>
+          <div class="campo"><label for="tal-uf">UF <span>*</span></label><select id="tal-uf" name="uf" required><option value="TO" selected>TO</option><option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option><option value="AM">AM</option><option value="BA">BA</option><option value="CE">CE</option><option value="DF">DF</option><option value="ES">ES</option><option value="GO">GO</option><option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option><option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option><option value="PR">PR</option><option value="PE">PE</option><option value="PI">PI</option><option value="RJ">RJ</option><option value="RN">RN</option><option value="RS">RS</option><option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option><option value="SP">SP</option><option value="SE">SE</option></select><span class="campo-erro">Selecione a UF.</span></div>
+        </div>
+        <div class="form-acoes"><button type="button" class="botao btn-proximo" data-next="2">Continuar</button></div>
+      </div>
+      <div class="form-step" data-step="2">
+        <h3 class="form-step__titulo" tabindex="-1">Perfil profissional</h3>
+        <div class="form-grid">
+          <div class="campo campo--full"><label for="tal-area">Área de interesse <span>*</span></label><select id="tal-area" name="area" required><option value="">Selecione</option><option value="instalacao">Instalação e técnica</option><option value="engenharia">Engenharia e projetos</option><option value="comercial">Comercial e vendas</option><option value="atendimento">Atendimento e pós-venda</option><option value="administrativo">Administrativo e financeiro</option><option value="logistica">Logística e almoxarifado</option><option value="outra">Outra área</option></select><span class="campo-erro">Selecione uma área.</span></div>
+          <div class="campo campo--full"><label for="tal-experiencia">Experiência resumida</label><textarea id="tal-experiencia" name="experiencia" rows="3" maxlength="2000" placeholder="Opcional"></textarea></div>
+          <div class="campo campo--full"><label for="tal-linkedin">LinkedIn ou portfólio</label><input type="url" id="tal-linkedin" name="linkedin" placeholder="https://..."><span class="campo-erro">URL inválida.</span></div>
+          <div class="campo campo--full">
+            <label>Anexar currículo</label>
+            <div class="upload-area" id="tal-upload-area" role="button" tabindex="0" aria-describedby="tal-upload-desc">
+              <div class="upload-area__icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
+              <div class="upload-area__titulo">Anexe seu currículo</div>
+              <div class="upload-area__desc" id="tal-upload-desc">PDF, DOC ou DOCX · até 5 MB · opcional</div>
+              <label class="upload-area__btn" for="tal-curriculo">Selecionar currículo</label>
+              <input type="file" id="tal-curriculo" name="curriculo" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+            </div>
+            <span class="campo-erro" id="tal-upload-erro"></span>
+            <div class="upload-info" id="tal-upload-info"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--acento);flex-shrink:0"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span class="upload-info__nome" id="tal-upload-nome"></span><div class="upload-info__acoes"><button type="button" class="upload-info__acao" id="tal-btn-substituir">Substituir</button><button type="button" class="upload-info__acao" id="tal-btn-remover">Remover</button></div></div>
+          </div>
+        </div>
+        <div class="form-acoes"><button type="button" class="botao botao--secundario btn-voltar" data-prev="1">Voltar</button><button type="button" class="botao btn-revisar" data-next="3">Revisar cadastro</button></div>
+      </div>
+      <div class="form-step" data-step="3">
+        <h3 class="form-step__titulo" tabindex="-1">Revisão e envio</h3>
+        <div class="revisao-lista" id="tal-revisao"></div><div class="campo campo--full consent-talentos"><label><input type="checkbox" name="talentConsent" value="true" required> Autorizo a NORTINS ENERGY a manter meu perfil e currículo no banco de talentos para futuras oportunidades. Posso revogar esta autorização pelo canal de privacidade.</label><span class="campo-erro">Autorize o cadastro para continuar.</span></div>
+        <p class="form-aviso">Cadastro para futuras oportunidades; não garante contratação. Consulte a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</p>
+        <p class="form-status" data-form-status role="status" aria-live="polite"></p><div class="form-acoes"><button type="button" class="botao botao--secundario btn-voltar" data-prev="2">Voltar</button><button type="submit" class="botao btn-enviar">Enviar meu cadastro</button></div>
+      </div>
+    </form>
+    <div class="form-enviando" id="tal-enviando" aria-live="polite"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Enviando…</div>
+    <div class="form-sucesso" id="tal-sucesso"><h3 class="form-sucesso__titulo">Cadastro recebido!</h3><p class="form-sucesso__texto">Seu perfil foi incluído no banco de talentos da NORTINS ENERGY.</p><button type="button" class="botao" data-close-modal="modal-talentos">Fechar</button></div>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+<script src="navegacao.js" defer></script>
+<script src="cookies.js" defer></script>
+</body>
+</html>

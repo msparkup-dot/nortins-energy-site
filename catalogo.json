@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "version": "rascunho-inicial",
+  "publishedAt": null,
+  "tariff": {
+    "value": 0.993,
+    "unit": "BRL/kWh",
+    "verified": false,
+    "validFrom": null,
+    "validUntil": null,
+    "source": "Parâmetro informado pelo cliente. Confirmar vigência e compatibilidade com a base da fatura antes de habilitar a conversão automática."
+  },
+  "kits": []
+}

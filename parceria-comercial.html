@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parceria Comercial · NORTINS ENERGY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body class="pagina-interna">
+  <!-- CABEÇALHO -->
+  <header class="cabecalho" id="topo">
+    <div class="cabecalho-inner">
+      <a href="index.html#inicio" class="logo" aria-label="NORTINS ENERGY — Início">
+        <img src="assets/logo.png" alt="NORTINS ENERGY" width="160" height="40">
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav-lista" role="list">
+          <li><a href="index.html#inicio">Início</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#faca-parte">Faça parte</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <a href="index.html#contato" class="botao cabecalho-cta">Fale conosco</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile" hidden>
+      <ul class="nav-mobile-lista" role="list">
+        <li><a href="index.html#inicio">Início</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#faca-parte">Faça parte</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pagina-interna__main">
+    <div class="pagina-interna__container">
+      <a href="index.html#faca-parte" class="pagina-interna__voltar">← Voltar ao site</a>
+
+      <span class="pagina-interna__rotulo">PARCERIA COMERCIAL</span>
+      <h1 class="pagina-interna__titulo">Conecte oportunidades à energia solar.</h1>
+      <p class="pagina-interna__texto">Quer atuar na prospecção de clientes ou construir uma parceria comercial com a NORTINS ENERGY? Apresente seu perfil e sua região de atuação.</p>
+      <p class="pagina-interna__apoio">Soluções para residências, empresas e agronegócio, com atuação em todo o Tocantins.</p>
+
+      <div class="formulario-painel">
+        <!-- Indicador de etapas -->
+        <div class="form-steps" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3">
+          <span class="form-steps__label" id="step-label">Etapa 1 de 3</span>
+          <div class="form-steps__bar"><div class="form-steps__fill" style="width:33%"></div></div>
+        </div>
+
+        <form id="form-parceria" novalidate>
+          <!-- ETAPA 1: Seus dados -->
+          <div class="form-step ativo" data-step="1">
+            <h2 class="form-step__titulo" tabindex="-1">Seus dados</h2>
+            <div class="form-grid">
+              <div class="campo campo--full">
+                <label for="par-nome">Nome completo <span>*</span></label>
+                <input type="text" id="par-nome" name="nome" required autocomplete="name">
+                <span class="campo-erro" role="alert">Informe seu nome completo.</span>
+              </div>
+              <div class="campo">
+                <label for="par-whatsapp">WhatsApp com DDD <span>*</span></label>
+                <input type="tel" id="par-whatsapp" name="whatsapp" required placeholder="(63) 99999-9999" autocomplete="tel">
+                <span class="campo-erro" role="alert">Informe um WhatsApp válido com DDD.</span>
+              </div>
+              <div class="campo">
+                <label for="par-email">E-mail</label>
+                <input type="email" id="par-email" name="email" autocomplete="email">
+                <span class="campo-erro" role="alert">Informe um e-mail válido.</span>
+              </div>
+              <div class="campo">
+                <label for="par-cidade">Cidade <span>*</span></label>
+                <input type="text" id="par-cidade" name="cidade" required autocomplete="address-level2">
+                <span class="campo-erro" role="alert">Informe sua cidade.</span>
+              </div>
+              <div class="campo">
+                <label for="par-uf">UF <span>*</span></label>
+                <select id="par-uf" name="uf" required>
+                  <option value="TO" selected>TO</option>
+                  <option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option>
+                  <option value="AM">AM</option><option value="BA">BA</option><option value="CE">CE</option>
+                  <option value="DF">DF</option><option value="ES">ES</option><option value="GO">GO</option>
+                  <option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option>
+                  <option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option>
+                  <option value="PR">PR</option><option value="PE">PE</option><option value="PI">PI</option>
+                  <option value="RJ">RJ</option><option value="RN">RN</option><option value="RS">RS</option>
+                  <option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option>
+                  <option value="SP">SP</option><option value="SE">SE</option>
+                </select>
+                <span class="campo-erro" role="alert">Selecione a UF.</span>
+              </div>
+            </div>
+            <div class="form-acoes">
+              <button type="button" class="botao btn-proximo" data-next="2">Continuar</button>
+            </div>
+          </div>
+
+          <!-- ETAPA 2: Seu interesse -->
+          <div class="form-step" data-step="2">
+            <h2 class="form-step__titulo" tabindex="-1">Seu interesse</h2>
+            <div class="form-grid">
+              <div class="campo campo--full">
+                <label for="par-atuacao">Como deseja atuar? <span>*</span></label>
+                <select id="par-atuacao" name="atuacao" required>
+                  <option value="">Selecione uma opção</option>
+                  <option value="indicacao">Indicação de clientes</option>
+                  <option value="prospeccao">Prospecção de clientes</option>
+                  <option value="representacao">Representação comercial</option>
+                  <option value="entender">Quero entender as possibilidades</option>
+                </select>
+                <span class="campo-erro" role="alert">Selecione como deseja atuar.</span>
+              </div>
+              <div class="campo campo--full">
+                <label for="par-regiao">Região onde pretende atuar <span>*</span></label>
+                <input type="text" id="par-regiao" name="regiao" required placeholder="Ex.: Palmas e região">
+                <span class="campo-erro" role="alert">Informe a região de atuação.</span>
+              </div>
+              <div class="campo campo--full">
+                <label for="par-experiencia">Conte um pouco sobre sua experiência</label>
+                <textarea id="par-experiencia" name="experiencia" maxlength="2000" rows="4"></textarea>
+              </div>
+            </div>
+            <div class="form-acoes">
+              <button type="button" class="botao botao--secundario btn-voltar" data-prev="1">Voltar</button>
+              <button type="button" class="botao btn-revisar" data-next="3">Revisar cadastro</button>
+            </div>
+          </div>
+
+          <!-- ETAPA 3: Revisão -->
+          <div class="form-step" data-step="3">
+            <h2 class="form-step__titulo" tabindex="-1">Revisão e envio</h2>
+            <div class="revisao-lista" id="par-revisao"></div>
+            <div class="form-acoes">
+              <button type="button" class="botao botao--secundario btn-voltar" data-prev="2">Voltar</button>
+              <button type="submit" class="botao btn-enviar">Enviar interesse em parceria</button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Estado: Enviando -->
+        <div class="form-enviando" id="par-enviando" aria-live="polite">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+          Enviando cadastro…
+        </div>
+
+        <!-- Estado: Sucesso -->
+        <div class="form-sucesso" id="par-sucesso">
+          <h2 class="form-sucesso__titulo">Recebemos seu interesse em parceria.</h2>
+          <p class="form-sucesso__texto">A equipe NORTINS poderá entrar em contato pelos dados informados para conhecer melhor seu perfil e sua região de atuação.</p>
+          <a href="index.html#faca-parte" class="botao">Voltar ao site</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="rodape-inner">
+      <p>&copy; 2026 NORTINS ENERGY. Todos os direitos reservados.</p>
+      <nav aria-label="Rodapé">
+        <a href="index.html#inicio">Início</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#faca-parte">Faça parte</a>
+        <a href="index.html#contato">Contato</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+  <script>
+  /* Formulário Parceria Comercial — multi-etapas */
+  (() => {
+    const form = document.getElementById('form-parceria');
+    if (!form) return;
+
+    const steps = form.querySelectorAll('.form-step');
+    const stepLabel = document.getElementById('step-label');
+    const stepFill = document.querySelector('.form-steps__fill');
+    const stepsBar = document.querySelector('.form-steps');
+    const revisaoEl = document.getElementById('par-revisao');
+    const enviandoEl = document.getElementById('par-enviando');
+    const sucessoEl = document.getElementById('par-sucesso');
+
+    const LABELS = {
+      nome: 'Nome completo',
+      whatsapp: 'WhatsApp',
+      email: 'E-mail',
+      cidade: 'Cidade',
+      uf: 'UF',
+      atuacao: 'Como deseja atuar',
+      regiao: 'Região de atuação',
+      experiencia: 'Experiência'
+    };
+
+    const ATUACAO_LABELS = {
+      indicacao: 'Indicação de clientes',
+      prospeccao: 'Prospecção de clientes',
+      representacao: 'Representação comercial',
+      entender: 'Quero entender as possibilidades'
+    };
+
+    function goTo(stepNum) {
+      steps.forEach(s => s.classList.remove('ativo'));
+      const target = form.querySelector(`.form-step[data-step="${stepNum}"]`);
+      if (target) {
+        target.classList.add('ativo');
+        const titulo = target.querySelector('.form-step__titulo');
+        if (titulo) { titulo.focus(); }
+        stepLabel.textContent = `Etapa ${stepNum} de 3`;
+        stepFill.style.width = `${(stepNum / 3) * 100}%`;
+        stepsBar.setAttribute('aria-valuenow', stepNum);
+      }
+    }
+
+    function validateStep(stepNum) {
+      const step = form.querySelector(`.form-step[data-step="${stepNum}"]`);
+      const fields = step.querySelectorAll('[required]');
+      let valid = true;
+      let firstError = null;
+
+      fields.forEach(field => {
+        const campo = field.closest('.campo');
+        const isEmail = field.type === 'email';
+        let fieldValid = field.value.trim() !== '';
+
+        if (isEmail && field.value.trim() !== '') {
+          fieldValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim());
+        }
+
+        if (!fieldValid) {
+          campo.classList.add('invalido');
+          if (!firstError) firstError = field;
+          valid = false;
+        } else {
+          campo.classList.remove('invalido');
+        }
+      });
+
+      // Validação opcional de email quando preenchido
+      if (stepNum === 1) {
+        const emailField = form.querySelector('#par-email');
+        const emailCampo = emailField.closest('.campo');
+        if (emailField.value.trim() !== '' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value.trim())) {
+          emailCampo.classList.add('invalido');
+          if (!firstError) firstError = emailField;
+          valid = false;
+        } else {
+          emailCampo.classList.remove('invalido');
+        }
+      }
+
+      if (firstError) firstError.focus();
+      return valid;
+    }
+
+    function montarRevisao() {
+      const data = new FormData(form);
+      const items = [];
+      ['nome', 'whatsapp', 'email', 'cidade', 'uf', 'atuacao', 'regiao', 'experiencia'].forEach(key => {
+        const val = data.get(key);
+        if (val && val.trim()) {
+          let display = val.trim();
+          if (key === 'atuacao') display = ATUACAO_LABELS[val] || val;
+          items.push(`<div class="revisao-item"><span class="revisao-label">${LABELS[key]}</span><span class="revisao-valor">${display}</span></div>`);
+        }
+      });
+      revisaoEl.innerHTML = items.join('');
+    }
+
+    // Navegação entre etapas
+    form.addEventListener('click', (e) => {
+      const nextBtn = e.target.closest('.btn-proximo, .btn-revisar');
+      const prevBtn = e.target.closest('.btn-voltar');
+
+      if (nextBtn) {
+        const currentStep = parseInt(nextBtn.closest('.form-step').dataset.step);
+        if (!validateStep(currentStep)) return;
+        const nextStep = parseInt(nextBtn.dataset.next);
+        if (nextStep === 3) montarRevisao();
+        goTo(nextStep);
+      }
+
+      if (prevBtn) {
+        goTo(parseInt(prevBtn.dataset.prev));
+      }
+    });
+
+    // Prevenir Enter nas etapas intermediárias
+    form.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
+        const currentStep = e.target.closest('.form-step');
+        if (currentStep && currentStep.dataset.step !== '3') {
+          e.preventDefault();
+        }
+      }
+    });
+
+    // Envio
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // TODO: Configurar endpoint real para recebimento de parcerias
+      // O formulário está preparado para enviar via fetch POST com JSON
+      // Endpoint esperado: POST /api/parceria
+      //
+      // Exemplo de implementação futura:
+      // const data = Object.fromEntries(new FormData(form));
+      // data.origem = 'parceria_comercial';
+      // data.data_recebimento = new Date().toISOString();
+      // try {
+      //   enviandoEl.classList.add('visivel');
+      //   form.style.display = 'none';
+      //   document.querySelector('.form-steps').style.display = 'none';
+      //   const resp = await fetch('/api/parceria', {
+      //     method: 'POST',
+      //     headers: { 'Content-Type': 'application/json' },
+      //     body: JSON.stringify(data)
+      //   });
+      //   if (!resp.ok) throw new Error('Falha no envio');
+      //   sucessoEl.classList.add('visivel');
+      //   form.reset();
+      // } catch (err) {
+      //   alert('Não foi possível enviar seu cadastro. Tente novamente.');
+      //   form.style.display = '';
+      //   document.querySelector('.form-steps').style.display = '';
+      //   enviandoEl.classList.remove('visivel');
+      // }
+      //
+      // AVISO: Sem endpoint configurado, o envio não será realizado.
+      alert('⚠️ Envio ainda indisponível.\nO formulário está pronto, mas falta configurar o servidor ou serviço de recebimento.\nConfigure o endpoint POST /api/parceria para receber cadastros de parceria comercial.');
+    });
+  })();
+  </script>
+</body>
+</html>
